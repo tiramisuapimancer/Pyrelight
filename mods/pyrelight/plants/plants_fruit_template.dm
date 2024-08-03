@@ -1,7 +1,7 @@
 /datum/fruit_segment
 	var/name
 	var/desc
-	var/object_type = /obj/item/chems/food/fruit_segment
+	var/object_type = /obj/item/food/fruit_segment
 	var/reagent_total
 	var/list/reagents
 	var/icon_state
@@ -42,7 +42,7 @@
 /datum/fruit_segment/proc/can_harvest_with(var/obj/item/prop, var/mob/user)
 	return FALSE
 
-/datum/fruit_segment/proc/on_harvest(var/obj/item/prop, var/mob/user, var/obj/item/chems/food/fruit/fruit)
+/datum/fruit_segment/proc/on_harvest(var/obj/item/prop, var/mob/user, var/obj/item/food/fruit/fruit)
 	if(!object_type)
 		return FALSE
 	var/obj/item/product = new object_type(get_turf(fruit), prop?.material?.type, src, fruit)
@@ -51,7 +51,7 @@
 	fruit.remove_segment(src)
 	return TRUE
 
-/datum/fruit_segment/proc/apply_fruit_appearance(var/obj/item/chems/food/fruit/fruit, var/count = 0)
+/datum/fruit_segment/proc/apply_fruit_appearance(var/obj/item/food/fruit/fruit, var/count = 0)
 	return
 
 /datum/fruit_segment/petal

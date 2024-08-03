@@ -1,11 +1,11 @@
-/obj/item/chems/food/fruit/flower_nightweave
+/obj/item/food/fruit/flower_nightweave
 	name = "nightweave flower"
 	desc = "A night-blooming flower found in damp places, such as cavern entrances or along the shoreline."
 	examine_info = "The bioluminescent petals are extremely poisonous, and the stamen and stigma can be used to brew potent sedatives."
 	icon = 'mods/pyrelight/icons/fruit/nightweave.dmi'
 	is_spawnable_type = TRUE
 
-/obj/item/chems/food/fruit/flower_nightweave/get_composition()
+/obj/item/food/fruit/flower_nightweave/get_composition()
 	var/static/list/composition = list(
 		new /datum/fruit_segment/petal(
 			"nightweave petal",

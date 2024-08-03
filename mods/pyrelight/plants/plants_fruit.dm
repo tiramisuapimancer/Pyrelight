@@ -1,4 +1,4 @@
-/obj/item/chems/food/fruit
+/obj/item/food/fruit
 	name = "abstract fruit"
 	desc = "A mysterious fruit of some kind."
 	icon = 'mods/pyrelight/icons/fruit/debug.dmi'
@@ -10,7 +10,7 @@
 	var/examine_info_rank = SKILL_BASIC
 	var/list/removed_segments
 
-/obj/item/chems/food/fruit/initialize_reagents(populate)
+/obj/item/food/fruit/initialize_reagents(populate)
 	var/segment_amount = 0
 	for(var/datum/fruit_segment/comp as anything in get_composition())
 		if(comp.contributes_to_fruit_reagents)
@@ -18,7 +18,7 @@
 	create_reagents(segment_amount)
 	return ..()
 
-/obj/item/chems/food/fruit/populate_reagents()
+/obj/item/food/fruit/populate_reagents()
 	for(var/datum/fruit_segment/comp as anything in get_composition())
 		if(!comp.contributes_to_fruit_reagents)
 			continue
@@ -26,11 +26,11 @@
 			reagents.add_reagent(rid, comp.reagents[rid])
 	return ..()
 
-/obj/item/chems/food/fruit/Destroy()
+/obj/item/food/fruit/Destroy()
 	removed_segments = null
 	return ..()
 
-/obj/item/chems/food/fruit/on_update_icon()
+/obj/item/food/fruit/on_update_icon()
 	. = ..()
 	var/list/comp_count = list()
 	for(var/datum/fruit_segment/comp as anything in get_composition())
@@ -41,7 +41,7 @@
 			for(var/i = 1 to remaining)
 				add_overlay(image(icon, "[comp.icon_state][++comp_count[comp.name]]"))
 
-/obj/item/chems/food/fruit/examine(mob/user, distance)
+/obj/item/food/fruit/examine(mob/user, distance)
 	. = ..()
 	if(distance > 1)
 		return
@@ -67,7 +67,7 @@
 		if(length(comp_string_comps))
 			to_chat(user, SPAN_NOTICE("With [comp_ind], you could harvest [english_list(comp_string_comps)]."))
 
-/obj/item/chems/food/fruit/attackby(obj/item/W, mob/living/user)
+/obj/item/food/fruit/attackby(obj/item/W, mob/living/user)
 	if(user?.a_intent != I_HURT)
 		var/list/fruit_comp = get_composition()
 		for(var/datum/fruit_segment/comp as anything in fruit_comp)
@@ -78,7 +78,7 @@
 			return TRUE
 	return ..()
 
-/obj/item/chems/food/fruit/attack_self(mob/user)
+/obj/item/food/fruit/attack_self(mob/user)
 	var/list/fruit_comp = get_composition()
 	for(var/datum/fruit_segment/comp as anything in fruit_comp)
 		var/remaining = comp.dissect_amount - LAZYACCESS(removed_segments, comp)
@@ -89,10 +89,10 @@
 			return TRUE
 	return ..()
 
-/obj/item/chems/food/fruit/proc/get_composition()
+/obj/item/food/fruit/proc/get_composition()
 	return
 
-/obj/item/chems/food/fruit/proc/remove_segment(var/datum/fruit_segment/remove_comp)
+/obj/item/food/fruit/proc/remove_segment(var/datum/fruit_segment/remove_comp)
 
 	LAZYINITLIST(removed_segments)
 	removed_segments[remove_comp]++
