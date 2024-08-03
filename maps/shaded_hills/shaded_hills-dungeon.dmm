@@ -65,7 +65,7 @@
 /obj/structure/bed/chair/bench/ebony{
 	dir = 8
 	},
-/obj/item/stack/medical/bruise_pack/bandage/five,
+/obj/item/stack/medical/bandage/crafted/five,
 /turf/floor/natural/path/herringbone/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "gy" = (
@@ -118,7 +118,7 @@
 /obj/structure/bed/chair/bench/ebony{
 	dir = 8
 	},
-/obj/item/chems/food/grown/dried_tobacco/bad,
+/obj/item/food/grown/dried_tobacco/bad,
 /obj/item/rock/flint/striker,
 /turf/floor/natural/path/herringbone/basalt,
 /area/shaded_hills/caves/dungeon/poi)
@@ -196,7 +196,7 @@
 /area/shaded_hills/caves/dungeon/poi)
 "nJ" = (
 /obj/structure/table/woodentable_reinforced/ebony,
-/obj/item/chems/food/grown/dried_tobacco/fine,
+/obj/item/food/grown/dried_tobacco/fine,
 /turf/floor/natural/path/running_bond/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "nT" = (
@@ -347,8 +347,8 @@
 /area/shaded_hills/caves/dungeon/poi)
 "xo" = (
 /obj/structure/closet/crate/chest/ebony,
-/obj/item/stack/medical/ointment/poultice/five,
-/obj/item/stack/medical/ointment/poultice/five,
+/obj/item/stack/medical/ointment/crafted/five,
+/obj/item/stack/medical/ointment/crafted/five,
 /turf/floor/natural/path/running_bond/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "xL" = (
@@ -392,7 +392,7 @@
 /obj/structure/bed/chair/bench/ebony{
 	dir = 4
 	},
-/obj/item/chems/food/grown/dried_tobacco/bad,
+/obj/item/food/grown/dried_tobacco/bad,
 /turf/floor/natural/path/herringbone/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "BG" = (
@@ -540,7 +540,7 @@
 /obj/structure/bed/chair/bench/ebony{
 	dir = 4
 	},
-/obj/item/stack/medical/bruise_pack/bandage/five,
+/obj/item/stack/medical/bandage/crafted/five,
 /turf/floor/natural/path/herringbone/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "MW" = (
@@ -578,8 +578,8 @@
 "Ri" = (
 /obj/item/stack/material/plank/mapped/ebony/five,
 /obj/structure/closet/crate/chest/ebony,
-/obj/item/stack/medical/bruise_pack/bandage/five,
-/obj/item/stack/medical/bruise_pack/bandage/five,
+/obj/item/stack/medical/bandage/crafted/five,
+/obj/item/stack/medical/bandage/crafted/five,
 /turf/floor/natural/path/running_bond/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "Rm" = (
@@ -635,7 +635,7 @@
 /area/shaded_hills/caves/dungeon/poi)
 "Vk" = (
 /obj/structure/table/woodentable_reinforced/ebony,
-/obj/item/chems/food/grown/dried_tobacco/bad,
+/obj/item/food/grown/dried_tobacco/bad,
 /turf/floor/natural/path/running_bond/basalt,
 /area/shaded_hills/caves/dungeon/poi)
 "Xx" = (
