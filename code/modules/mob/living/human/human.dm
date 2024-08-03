@@ -1159,6 +1159,16 @@
 	var/temp_inc = max(min(BODYTEMP_HEATING_MAX*(1-get_heat_protection()), exposed_temperature - bodytemperature), 0)
 	bodytemperature += temp_inc
 
+/mob/living/human/need_breathe()
+	return has_trait(/decl/trait/undead) ? FALSE : ..()
+
+// Undead don't get hungry/thirsty (except for brains)
+/mob/living/human/get_nutrition()
+	return has_trait(/decl/trait/undead) ? get_max_nutrition() : ..()
+
+/mob/living/human/get_hydration()
+	return has_trait(/decl/trait/undead) ? get_max_hydration() : ..()
+
 /mob/living/human/currently_has_skin()
 	return currently_has_meat()
 
@@ -1173,3 +1183,26 @@
 
 /mob/living/human/get_attack_telegraph_delay()
 	return client ? 0 : DEFAULT_ATTACK_COOLDOWN
+
+/mob/living/human/set_status(condition, amount)
+	if(has_trait(/decl/trait/undead))
+		var/static/list/ignore_status_conditions = list(
+			STAT_BLIND,
+			STAT_DEAF,
+			STAT_CONFUSE,
+			STAT_DIZZY,
+			STAT_JITTER,
+			STAT_STUTTER,
+			STAT_SLUR,
+			STAT_ASLEEP,
+			STAT_DRUGGY,
+			STAT_DROWSY,
+			STAT_BLURRY,
+			STAT_BLIND,
+			STAT_TINNITUS,
+			STAT_DEAF
+		)
+		if(condition in ignore_status_conditions)
+			return
+
+	. = ..()

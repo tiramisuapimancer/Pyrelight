@@ -4036,8 +4036,8 @@
 #include "maps\random_ruins\exoplanet_ruins\spider_nest\spider_nest.dm"
 #include "maps\random_ruins\exoplanet_ruins\tar_anomaly\tar_anomaly.dm"
 #include "maps\random_ruins\space_ruins\space_ruins.dm"
+#include "maps\shaded_hills\shaded_hills.dm"
 #include "maps\shaded_hills\shaded_hills_define.dm"
-#include "maps\tradeship\tradeship.dm"
 #include "maps\tradeship\tradeship_define.dm"
 #include "maps\~mapsystem\map_names.dm"
 #include "maps\~mapsystem\map_preferences.dm"
@@ -4054,5 +4054,6 @@
 #include "maps\~mapsystem\maps_unit_testing.dm"
 #include "maps\~unit_tests\unit_testing.dm"
 #include "mods\_modpack.dm"
+#include "mods\pyrelight\undead\_undead.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE
