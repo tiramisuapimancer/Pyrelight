@@ -21,8 +21,8 @@
 	reset_hair()
 	if(get_bodytype()?.appearance_flags & HAS_SKIN_COLOR)
 		_skin_colour = pick(COLOR_GRAY, COLOR_GRAY15, COLOR_GRAY20, COLOR_GRAY40, COLOR_GRAY80, COLOR_WHITE)
-		SET_HAIR_COLOUR(src, _skin_colour, TRUE)
-		SET_FACIAL_HAIR_COLOUR(src, _skin_colour, TRUE)
+		SET_HAIR_COLOR(src, _skin_colour, TRUE)
+		SET_FACIAL_HAIR_COLOR(src, _skin_colour, TRUE)
 
 	var/obj/item/organ/external/head/head = get_organ(BP_HEAD)
 	if(istype(head))
