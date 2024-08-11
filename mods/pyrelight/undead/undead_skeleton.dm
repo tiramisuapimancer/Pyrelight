@@ -11,6 +11,11 @@
 	ai = new /datum/mob_controller/aggressive/skeleton(src)
 	faction = "undead"
 
+	if(!istype(skillset, /datum/skillset/undead) && !ispath(skillset, /datum/skillset/undead))
+		if(istype(skillset))
+			QDEL_NULL(skillset)
+		skillset = new /datum/skillset/undead(src)
+
 	for(var/obj/item/organ/external/limb in get_external_organs())
 		if(!BP_IS_PROSTHETIC(limb))
 			limb.skeletonize()
@@ -19,9 +24,13 @@
 		remove_organ(organ, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE)
 		qdel(organ)
 
+	set_max_health(round(species.total_health / 4))
 	vessel?.clear_reagents()
 	SET_HAIR_STYLE(src, /decl/sprite_accessory/hair/bald, FALSE)
 	update_body()
+
+/mob/living/human/skeleton
+	skillset = /datum/skillset/undead
 
 /mob/living/human/skeleton/post_setup(species_name, datum/mob_snapshot/supplied_appearance)
 	. = ..()
