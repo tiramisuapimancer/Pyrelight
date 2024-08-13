@@ -9,8 +9,13 @@
 
 	if(istype(ai))
 		QDEL_NULL(ai)
-	faction = "undead"
 	ai = new /datum/mob_controller/aggressive/zombie(src)
+	faction = "undead"
+
+	if(!istype(skillset, /datum/skillset/undead) && !ispath(skillset, /datum/skillset/undead))
+		if(istype(skillset))
+			QDEL_NULL(skillset)
+		skillset = new /datum/skillset/undead(src)
 
 	for(var/obj/item/organ/organ in get_organs())
 		organ.die()
@@ -40,8 +45,12 @@
 				else
 					limb.createwound(BURN, rand(limb.max_damage * 0.25, limb.max_damage * 0.5))
 
+	set_max_health(round(species.total_health / 3))
 	vessel.remove_any(vessel.total_volume * rand(0.2, 0.5))
 	update_body()
+
+/mob/living/human/zombie
+	skillset = /datum/skillset/undead
 
 /mob/living/human/zombie/post_setup(species_name, datum/mob_snapshot/supplied_appearance)
 	. = ..()
