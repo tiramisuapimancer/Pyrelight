@@ -2,6 +2,12 @@
 #ifndef MODPACK_PYRELIGHT
 #define MODPACK_PYRELIGHT
 #include "_pyrelight.dm"
+#include "datum\traits\_wyrd.dm"
+#include "datum\traits\_wyrd_categories.dm"
+#include "datum\traits\wyrd_wild.dm"
+#include "datum\wyrdling\ears.dm"
+#include "datum\wyrdling\mask.dm"
+#include "datum\wyrdling\tails.dm"
 #include "datum\culture.dm"
 #include "datum\factions.dm"
 #include "datum\locations.dm"
