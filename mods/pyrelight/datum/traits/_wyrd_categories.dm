@@ -1,4 +1,6 @@
 // TODO: actual effects
+// TODO: integrate with wyrdling
+/*
 /decl/trait/wyrd/fire
 	name = "Burning Sign"
 	description = "Affinity for the New School of alchemical working (energy, force, fire, lightning). TODO."
@@ -42,7 +44,7 @@
 		/decl/trait/wyrd/deep
 	)
 	uid = "trait_wyrd_flesh"
-
+*/
 /decl/trait/wyrd/wild
 	name = "Wild Sign"
 	description = "A wyrdling is a human whose soul has been touched by the primeveal \
@@ -51,9 +53,11 @@
 	many to cover their wyrdmarks and hide their nature."
 	permitted_species = list(SPECIES_HUMAN)
 	uid = "trait_wyrd_wild"
+/*
 	incompatible_with = list(
 		/decl/trait/wyrd/fire,
 		/decl/trait/wyrd/sky,
 		/decl/trait/wyrd/deep,
 		/decl/trait/wyrd/flesh
 	)
+*/
