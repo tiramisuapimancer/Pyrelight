@@ -4,7 +4,6 @@
 	icon        = 'icons/obj/items/rubber_stamps.dmi'
 	icon_state  = "stamp-deckchief"
 	item_state  = "stamp"
-	throwforce  = 0
 	w_class     = ITEM_SIZE_TINY
 	throw_speed = 7
 	throw_range = 15

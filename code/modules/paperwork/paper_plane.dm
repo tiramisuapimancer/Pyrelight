@@ -9,7 +9,6 @@
 	item_state      = "paper"
 	layer           = ABOVE_OBJ_LAYER
 	does_spin       = FALSE
-	throwforce      = 0
 	throw_range     = 20
 	throw_speed     = 1
 	w_class         = ITEM_SIZE_TINY

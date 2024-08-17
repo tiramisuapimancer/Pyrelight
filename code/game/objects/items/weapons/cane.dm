@@ -5,8 +5,6 @@
 	icon_state = "cane"
 	item_state = "stick"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
-	force = 5.0
-	throwforce = 7
 	w_class = ITEM_SIZE_SMALL
 	material = /decl/material/solid/metal/aluminium
 	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
