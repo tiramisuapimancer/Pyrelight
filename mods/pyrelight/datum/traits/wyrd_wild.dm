@@ -29,6 +29,11 @@
 	mask_type = /obj/item/clothing/mask/ghost_caul/deer
 	uid = "trait_wyrd_wild_deer"
 
+/decl/trait/wyrd/wild/animal_form/deer_antlers
+	name = "Crowned Deer Semblance"
+	mask_type = /obj/item/clothing/mask/ghost_caul/deer_antlers
+	uid = "trait_wyrd_wild_deer_antlers"
+
 /decl/trait/wyrd/wild/animal_form/rabbit
 	name = "Rabbit Semblance"
 	mask_type = /obj/item/clothing/mask/ghost_caul/rabbit
