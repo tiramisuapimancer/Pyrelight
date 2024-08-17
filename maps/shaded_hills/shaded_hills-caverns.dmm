@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "az" = (
-/mob/living/simple_animal/hostile/giant_spider/guard/cave,
+/obj/random/hostile/cave,
 /turf/floor/natural/rock/basalt,
 /area/shaded_hills/caves/deep/poi)
 "bV" = (
@@ -28,7 +28,7 @@
 /turf/floor/natural/lava,
 /area/shaded_hills/caves/deep/poi)
 "wz" = (
-/mob/living/simple_animal/hostile/scarybat/cave,
+/obj/random/hostile/cave,
 /turf/floor/natural/rock/basalt,
 /area/shaded_hills/caves/deep)
 "MT" = (
@@ -38,7 +38,7 @@
 /turf/wall/natural/basalt/shaded_hills,
 /area/shaded_hills/caves/deep)
 "SH" = (
-/mob/living/simple_animal/hostile/scarybat/cave,
+/obj/random/hostile/cave,
 /turf/floor/natural/rock/basalt,
 /area/shaded_hills/caves/deep/poi)
 
