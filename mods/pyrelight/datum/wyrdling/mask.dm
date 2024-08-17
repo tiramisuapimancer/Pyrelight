@@ -32,7 +32,7 @@
 			markings_color = initial(markings_color)
 
 		eyes_color  = wyrdling.get_eye_colour()
-		if(!eyes_color ||eyes_color == COLOR_BLACK)
+		if(!eyes_color || eyes_color == COLOR_BLACK)
 			eyes_color = initial(eyes_color)
 
 		copy_wyrd_fur_color(fur_color)
@@ -56,9 +56,8 @@
 /mob/living/proc/copy_wyrd_eyes_color(new_color)
 	return
 
-/*
 /mob/living/simple_animal/passive/fox/copy_wyrd_fur_color(new_color)
-	fur_color = new_color
+	fur_color      = new_color
 /mob/living/simple_animal/passive/fox/copy_wyrd_marking_color(new_color)
 	markings_color = new_color
 /mob/living/simple_animal/passive/fox/copy_wyrd_socks_color(new_color)
@@ -67,14 +66,13 @@
 	eyes_color     = new_color
 
 /mob/living/simple_animal/passive/deer/copy_wyrd_fur_color(new_color)
-	fur_color = new_color
+	fur_color      = new_color
 /mob/living/simple_animal/passive/deer/copy_wyrd_marking_color(new_color)
 	markings_color = new_color
 /mob/living/simple_animal/passive/deer/copy_wyrd_socks_color(new_color)
 	socks_color    = new_color
 /mob/living/simple_animal/passive/deer/copy_wyrd_eyes_color(new_color)
 	eyes_color     = new_color
-*/
 
 /decl/loadout_option/fantasy/mask/ghost_caul
 	name = "customised wyrdling mask"
