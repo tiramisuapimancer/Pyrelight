@@ -8,10 +8,7 @@
 	heat_capacity = 10000
 	explosion_resistance = 1
 	turf_flags = TURF_IS_HOLOMAP_PATH
-	initial_gas = list(
-		/decl/material/gas/oxygen = MOLES_O2STANDARD,
-		/decl/material/gas/nitrogen = MOLES_N2STANDARD
-	)
+	initial_gas = GAS_STANDARD_AIRMIX
 	zone_membership_candidate = TRUE
 	open_turf_type = /turf/open/airless
 
@@ -41,6 +38,8 @@
 	return TRUE
 
 /turf/floor/is_plating()
+	if(!(atom_flags & ATOM_FLAG_INITIALIZED))
+		return !initial_flooring
 	return !flooring
 
 /turf/floor/get_base_movement_delay(var/travel_dir, var/mob/mover)
@@ -140,7 +139,7 @@
 	initial_gas = null
 
 /turf/floor/shuttle_ceiling/air
-	initial_gas = list(/decl/material/gas/oxygen = MOLES_O2STANDARD, /decl/material/gas/nitrogen = MOLES_N2STANDARD)
+	initial_gas = GAS_STANDARD_AIRMIX
 
 /turf/floor/is_floor()
 	return !density && !is_open()
