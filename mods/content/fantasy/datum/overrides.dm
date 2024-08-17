@@ -56,3 +56,20 @@
 // Rename wooden prostheses
 /decl/bodytype/prosthetic/wooden
 	name = "carved wooden" // weird to call it 'crude' when it's cutting-edge for the setting
+
+// Overrides to populate the dungeon with undead.
+/obj/random/hostile/dungeon/spawn_choices()
+	var/static/list/spawnable_choices = list(
+		/mob/living/human/zombie         = 1,
+		/mob/living/human/skeleton       = 2,
+		/mob/living/human/zombie/hnoll   = 1,
+		/mob/living/human/skeleton/hnoll = 2
+	)
+	return spawnable_choices
+
+/obj/random/hostile/cave/spawn_choices()
+	var/static/list/spawnable_choices = list(
+		/mob/living/simple_animal/hostile/giant_spider/guard/cave = 1,
+		/mob/living/simple_animal/hostile/scarybat/cave           = 4
+	)
+	return spawnable_choices
