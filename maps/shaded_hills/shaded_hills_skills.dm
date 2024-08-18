@@ -203,7 +203,7 @@
 /decl/skill/finance/update_special_effects(mob/mob, level)
 	return //we don't want legalese here
 
-/decl/skill/hauling
+/decl/skill/general/hauling
 	name = "Athletics"
 	desc = "Your ability to perform tasks requiring great strength, dexterity, or endurance."
 	category = /decl/skill_category/security
